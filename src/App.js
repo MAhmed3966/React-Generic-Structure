@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import Routers from "./routes/Routers.js";
+import NavScrollExample from "./Header/navbar.js";
+import { BrowserRouter } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function App() {
+  useEffect(() => {
+    console.log("Render after test state is been updated");
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavScrollExample />
+      <Routers />
     </div>
   );
 }
